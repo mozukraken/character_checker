@@ -15,4 +15,20 @@ body {
   width: 300px;
   height: 100px;
   background: #cae6f4;
+  transition: .8s;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  float: left;
+}
+
+.card + .card {
+  margin-left: 100px;
+}
+
+#cards.move {
+  transform: transform(-200px, 0);
 }
