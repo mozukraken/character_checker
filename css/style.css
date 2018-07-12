@@ -9,6 +9,7 @@ body {
   width: 100px;
   height: 100px;
   border: 2px solid #bbb;
+  overflow: hidden;
 }
 
 #cards {
@@ -30,5 +31,5 @@ body {
 }
 
 #cards.move {
-  transform: transform(-200px, 0);
+  transform: translate(-200px, 0);
 }
