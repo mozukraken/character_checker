@@ -33,3 +33,14 @@ body {
 #cards.move {
   transform: translate(-1000px, 0);
 }
+
+.left-side {
+  width: 160px;
+  float: left;
+}
+
+.right-side {
+  width: 260px;
+  float: right;
+  text-align: center;
+}
