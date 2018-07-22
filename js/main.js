@@ -4,6 +4,9 @@
   var cards = document.getElementById('cards');
   var check = document.getElementById('check');
   var retry = document.getElementById('retry');
+  var userName = document.getElementById('user_name');
+
+  userName.focus();
 
   check.addEventListener('click', function() {
     var msgs = [
@@ -36,10 +39,15 @@
       document.getElementById(id).textContent = text;
     }
 
+    if (userName.value === '' || userName.value.length > 10) {
+      userName.value = '名無し';
+    }
+
     msg = getRandomElement(msgs);
     job = getRandomElement(jobs);
     type = getRandomElement(types);
 
+    setTextContent('result_name', userName.value);
     setTextContent('result_msg', msg);
     setTextContent('result_job', job.name);
     resultImg.children[0].src = 'img/' + job.img;
@@ -51,6 +59,8 @@
 
   retry.addEventListener('click', function() {
     cards.className = '';
+    userName.value = '';
+    userName.focus();
   });
 
 })();
