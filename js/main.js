@@ -44,6 +44,7 @@
     setTextContent('result_job', job.name);
     resultImg.children[0].src = 'img/' + job.img;
     setTextContent('result_type', type.name);
+    resultImg.className = 'left-side ' + type.img;
 
     cards.className = 'move';
   });
