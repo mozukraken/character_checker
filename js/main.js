@@ -30,6 +30,8 @@
     var type;
 
     var resultImg = document.getElementById('result_img');
+    var tweet = document.getElementById('tweet');
+    var tweetUrl;
 
     function getRandomElement(array) {
       return array[Math.floor(Math.random() * array.length)];
@@ -47,12 +49,15 @@
     job = getRandomElement(jobs);
     type = getRandomElement(types);
 
+    tweetUrl = 'https://twitter.com/intent/tweet';
+
     setTextContent('result_name', userName.value);
     setTextContent('result_msg', msg);
     setTextContent('result_job', job.name);
     resultImg.children[0].src = 'img/' + job.img;
     setTextContent('result_type', type.name);
     resultImg.className = 'left-side ' + type.img;
+    tweet.href = tweetUrl;
 
     cards.className = 'move';
   });
