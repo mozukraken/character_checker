@@ -49,7 +49,14 @@
     job = getRandomElement(jobs);
     type = getRandomElement(types);
 
-    tweetUrl = 'https://twitter.com/intent/tweet';
+    tweetUrl =
+    'https://twitter.com/intent/tweet?text' +
+    encodeURIComponet(
+      userName.value + 'さんは' +
+      msg +
+      job.name + 'でした！'
+    ) +
+    '&hashtags=shindan';
 
     setTextContent('result_name', userName.value);
     setTextContent('result_msg', msg);
